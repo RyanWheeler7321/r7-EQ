@@ -39,7 +39,7 @@ _LIVE_INTERVAL_S = 0.125
 _K_WEIGHT_DB = (10 * np.log10(FREQUENCIES ** 4 / (FREQUENCIES ** 4 + 38.0 ** 4))
                 + 4.0 / (1 + (1500.0 / FREQUENCIES) ** 2))
 _LIVE_WEIGHT = FREQUENCIES * 10 ** (_K_WEIGHT_DB / 10)
-_FILE_FILTER = "R7-EQ profile (*.r7eq)"
+_FILE_FILTER = "r7-EQ profile (*.r7eq)"
 
 
 _STYLE = """
@@ -145,7 +145,7 @@ class MainWindow(QMainWindow):
         self._dialog: QWidget | None = None
         self._resize_cursor_widget: QWidget | None = None
         self.setObjectName("R7EqWindow")
-        self.setWindowTitle("R7-EQ")
+        self.setWindowTitle("r7-EQ")
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         self.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint)
         self._base_width = BASE_WIDTH   # Raised to the real minimum once the bars are built.

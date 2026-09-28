@@ -1,4 +1,4 @@
-// R7 Space: stereo width with centred bass, speaker "3D" side shaping, and a small room.
+// r7 Space: stereo width with centred bass, speaker "3D" side shaping, and a small room.
 // Plain VST2 ABI (no SDK). Mid (mono/centre, e.g. voices) is never filtered by Width or 3D.
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
@@ -210,9 +210,9 @@ static intptr_t __cdecl dispatch(Effect* e, int32_t op, int32_t index, intptr_t 
     case 8: if (index < 0 || index >= ParamCount) return 0; copyText(ptr, ParamNames[index]); return 1;
     case 10: if (opt > 1000 && opt <= 384000) { s->rate = opt; InterlockedExchange(&s->dirty, 1); } return 1;
     case 12: if (value) { clearAll(s); InterlockedExchange(&s->dirty, 1); } return 1;  // resume
-    case 45: copyText(ptr, "R7 Space", 32); return 1;
+    case 45: copyText(ptr, "r7 Space", 32); return 1;
     case 47: copyText(ptr, "Ryan", 64); return 1;
-    case 48: copyText(ptr, "R7 Space", 64); return 1;
+    case 48: copyText(ptr, "r7 Space", 64); return 1;
     case 49: return 1;
     case 58: return 2400;
     default: return 0;

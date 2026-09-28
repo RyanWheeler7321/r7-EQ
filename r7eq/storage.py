@@ -178,7 +178,7 @@ class Store:
         self._save_app_settings(device=key)
 
     def power(self):
-        """R7-EQ's master switch, for every device."""
+        """r7-EQ's master switch, for every device."""
         return self._app_settings().get('power', True) is not False
 
     def save_power(self, on):
@@ -196,7 +196,7 @@ class Store:
         try:
             raw = json.loads(Path(path).read_text(encoding='utf-8'))
             if raw.get('r7eq') != 'profile' or raw.get('version') != 1:
-                raise ValueError('not an R7-EQ profile')
+                raise ValueError('not an r7-EQ profile')
             return _read_settings(raw)
         except (ValueError, KeyError, TypeError, AttributeError) as exc:
             raise ValueError(f'Cannot import {Path(path).name}: {exc}') from exc

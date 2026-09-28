@@ -1,6 +1,6 @@
-// R7 Compressor: Chromium's Web Audio DynamicsCompressor with R7's own makeup gain in place of
+// r7 Compressor: Chromium's Web Audio DynamicsCompressor with r7's own makeup gain in place of
 // Chrome's automatic one, a dry blend, a detector that can ignore bass, and the live boost meter
-// R7-EQ reads.
+// r7-EQ reads.
 //
 // The compressor itself follows third_party/blink/renderer/platform/audio/dynamics_compressor.cc:
 //
@@ -346,9 +346,9 @@ static intptr_t __cdecl dispatch(Effect* e, int32_t op, int32_t index, intptr_t 
     }
     case 10: if (opt > 1000 && opt <= 384000) { s->rate = opt; InterlockedExchange(&s->dirty, 1); } return 1;
     case 12: if (value) { configure(s); reset(s); } return 1;
-    case 45: copyText(ptr, "R7 Compressor", 32); return 1;
+    case 45: copyText(ptr, "r7 Compressor", 32); return 1;
     case 47: copyText(ptr, "Ryan", 64); return 1;
-    case 48: copyText(ptr, "R7 Compressor", 64); return 1;
+    case 48: copyText(ptr, "r7 Compressor", 64); return 1;
     case 49: return 1;
     case 58: return 2400;
     default: return 0;

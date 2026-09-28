@@ -18,7 +18,7 @@ _com = threading.local()
 def _load_pycaw():
     """comtypes fails on a thread already in the other COM mode, so it's imported on its own thread."""
     if 'comtypes' not in sys.modules:
-        thread = threading.Thread(target=__import__, args=('pycaw.pycaw',), name='R7-EQ COM import')
+        thread = threading.Thread(target=__import__, args=('pycaw.pycaw',), name='r7-EQ COM import')
         thread.start()
         thread.join()
     if not getattr(_com, 'ready', False):

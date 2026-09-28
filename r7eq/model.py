@@ -22,7 +22,7 @@ COMPRESSOR_RANGES = {'comp_threshold_db': (-100.0, 0.0), 'comp_knee_db': (0.0, 4
                      'comp_ratio': (1.0, 20.0), 'comp_attack_ms': (0.0, 200.0),
                      'comp_release_ms': (1.0, 1000.0), 'comp_bass_hz': (0.0, 300.0),
                      'comp_dry_pct': (0.0, 100.0)}
-# R7 Space plugin: stereo width, speaker 3D, room amount and room size (percent).
+# r7 Space plugin: stereo width, speaker 3D, room amount and room size (percent).
 SPACE_RANGES = {'width_pct': (0.0, 200.0), 'depth_3d': (0.0, 100.0),
                 'room_pct': (0.0, 100.0), 'room_size': (0.0, 100.0)}
 SLIDER_RANGES = {**TONE_RANGES, **COMPRESSOR_RANGES, **SPACE_RANGES}

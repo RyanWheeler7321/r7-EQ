@@ -157,7 +157,7 @@ class SpectrumMonitor(QObject):
         session = _Session()
         self._session = session
         session.thread = threading.Thread(target=self._capture, args=(session,),
-                                          name='R7-EQ spectrum', daemon=True)
+                                          name='r7-EQ spectrum', daemon=True)
         session.thread.start()
 
     def stop(self) -> None:
@@ -173,7 +173,7 @@ class SpectrumMonitor(QObject):
             session.thread.join(timeout=0.75)
             if session.thread.is_alive():
                 logging.error('operation=spectrum,status=stop-timeout; WASAPI capture did not close within 750ms')
-                self.statusChanged.emit('error', 'Spectrum capture did not close promptly; see R7-EQ log')
+                self.statusChanged.emit('error', 'Spectrum capture did not close promptly; see r7-EQ log')
                 return False
         return True
 

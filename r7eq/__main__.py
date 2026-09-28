@@ -22,7 +22,7 @@ from .visibility import NativeVisibility, Visibility, owned_dialogs
 
 
 def main():
-    parser = argparse.ArgumentParser(prog='R7-EQ')
+    parser = argparse.ArgumentParser(prog='r7-EQ')
     parser.add_argument('--data-dir', type=Path)
     parser.add_argument('--ready-file', type=Path)
     parser.add_argument('--stop', action='store_true')
@@ -71,7 +71,7 @@ def main():
     if os.name == 'nt':
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('R7EQ')
     app = QApplication(sys.argv[:1])
-    app.setApplicationName('R7-EQ')
+    app.setApplicationName('r7-EQ')
     app.setOrganizationName('R7EQ')
     app.setFont(QFont('Segoe UI', 9))
     app.setWindowIcon(QIcon(str(Path(__file__).with_name('icon.svg'))))

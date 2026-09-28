@@ -29,7 +29,7 @@ class _Writer(QObject):
         self.stopping = False
         self.saved_revision = 0
         self.failed_revision = 0
-        self.thread = threading.Thread(target=self._run, name='R7-EQ settings', daemon=True)
+        self.thread = threading.Thread(target=self._run, name='r7-EQ settings', daemon=True)
         self.thread.start()
 
     def submit(self, revision, profiles, changed=(), removed=(), attach=False, power=True):
@@ -243,7 +243,7 @@ class Controller(QObject):
             self._pending_changes.add(profile.key)
             logging.info('operation=device-add,name=%r,slot=%d', name, slot)
         if new:
-            # The first profile also connects R7-EQ to Equalizer APO's config.txt.
+            # The first profile also connects r7-EQ to Equalizer APO's config.txt.
             self._revision += 1
             self._dispatch(attach=True)
 

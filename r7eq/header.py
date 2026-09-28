@@ -92,7 +92,7 @@ class Header(QWidget):
         controls = QHBoxLayout(self)
         controls.setContentsMargins(24, 0, 12, 0)
         controls.setSpacing(5)
-        brand = QLabel("R7-EQ", self)
+        brand = QLabel("r7-EQ", self)
         brand.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents)
         brand_font = QFont("Montserrat", 19, QFont.Weight.DemiBold)
         brand_font.setLetterSpacing(QFont.SpacingType.AbsoluteSpacing, 0.7)
@@ -163,9 +163,9 @@ class Header(QWidget):
         controls.addStretch(1)
         self._gap(controls)
 
-        # Everything R7-EQ does, then the EQ (with Space) and the compressor on their own.
+        # Everything r7-EQ does, then the EQ (with Space) and the compressor on their own.
         self.power_toggle = Switch("All", self)
-        self.power_toggle.setToolTip("R7-EQ on or off for every device: EQ, Space, compressor and clip guard. "
+        self.power_toggle.setToolTip("r7-EQ on or off for every device: EQ, Space, compressor and clip guard. "
                                      "Off, your audio plays untouched.")
         controls.addWidget(self.power_toggle)
         controls.addSpacing(8)

@@ -1,4 +1,4 @@
-// R7 Limiter: stereo-linked lookahead peak limiter, the last stage of the R7-EQ chain.
+// r7 Limiter: stereo-linked lookahead peak limiter, the last stage of the r7-EQ chain.
 // Guarantee: |output| <= ceiling. The gain is the minimum required gain held over the lookahead
 // window, then box-smoothed over the same window (so it has fully reached the required gain when
 // the peak leaves the delay line), then released slowly. Quiet material passes untouched.
@@ -127,9 +127,9 @@ static intptr_t __cdecl dispatch(Effect* e, int32_t op, int32_t index, intptr_t 
     case 8: if (index != 0) return 0; copyText(ptr, "Ceiling"); return 1;
     case 10: if (opt > 1000 && opt <= 384000) { s->rate = opt; InterlockedExchange(&s->dirty, 1); } return 1;
     case 12: if (value) { reset(s); InterlockedExchange(&s->dirty, 1); } return 1;
-    case 45: copyText(ptr, "R7 Limiter", 32); return 1;
+    case 45: copyText(ptr, "r7 Limiter", 32); return 1;
     case 47: copyText(ptr, "Ryan", 64); return 1;
-    case 48: copyText(ptr, "R7 Limiter", 64); return 1;
+    case 48: copyText(ptr, "r7 Limiter", 64); return 1;
     case 49: return 1;
     case 58: return 2400;
     default: return 0;

@@ -1,4 +1,4 @@
-"""R7 Limiter: the last step, so the output never goes above -0.3 dBFS."""
+"""r7 Limiter: the last step, so the output never goes above -0.3 dBFS."""
 from pathlib import Path
 
 from .model import effective_preamp, response_samples, space_active

@@ -1,4 +1,4 @@
-"""R7 Space: width with centred bass, speaker 3D and a small room, via the native R7Space VST2."""
+"""r7 Space: width with centred bass, speaker 3D and a small room, via the native R7Space VST2."""
 from pathlib import Path
 
 from .model import space_active
