@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="R7-EQ icon">
+<defs>
+  <linearGradient id="bar" x1="0" y1="28" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#F92FA3"/><stop offset="1" stop-color="#E90E93"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="64" cy="64" r="40" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#E3008C" stop-opacity="0.2"/><stop offset="1" stop-color="#E3008C" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="bg" x1="16" y1="8" x2="112" y2="120" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#1D121F"/><stop offset="1" stop-color="#140E18"/>
+  </linearGradient>
+  <linearGradient id="rim" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FF3DAA" stop-opacity="0.6"/>
+    <stop offset="0.45" stop-color="#FF3DAA" stop-opacity="0.2"/>
+    <stop offset="1" stop-color="#FF3DAA" stop-opacity="0.25"/>
+  </linearGradient>
+  <linearGradient id="frame" x1="10" y1="6" x2="118" y2="122" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#FF3DAA" stop-opacity="0.9"/><stop offset="0.5" stop-color="#FF3DAA" stop-opacity="0.62"/><stop offset="1" stop-color="#FF3DAA" stop-opacity="0.75"/>
+  </linearGradient>
+</defs>
+<path d="M24 0H104L128 24V104L104 128H24L0 104V24Z" fill="url(#bg)"/>
+<path d="M24.8 1.5H103.2L126.5 24.8V103.2L103.2 126.5H24.8L1.5 103.2V24.8Z" fill="none" stroke="url(#rim)" stroke-width="2"/>
+<path d="M32 10H96L118 32V96L96 118H32L10 96V32Z" fill="none" stroke="url(#frame)" stroke-width="3.0" stroke-linejoin="round"/>
+<circle cx="64" cy="64" r="40" fill="url(#glow)"/>
+<rect x="23" y="52" width="10" height="24" rx="5" fill="url(#bar)"/>
+<rect x="40.5" y="42" width="11" height="44" rx="5.5" fill="#F6F2F8"/>
+<rect x="58" y="28" width="12" height="72" rx="6" fill="url(#bar)"/>
+<rect x="76.5" y="42" width="11" height="44" rx="5.5" fill="#F6F2F8"/>
+<rect x="95" y="52" width="10" height="24" rx="5" fill="url(#bar)"/>
+</svg>
